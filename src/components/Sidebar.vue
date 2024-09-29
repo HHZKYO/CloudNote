@@ -23,11 +23,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #sidebar {
   position: relative;
   width: 56px;
   text-align: center;
+  background-color: #2c333c;
 }
 
 .icons {
@@ -52,7 +53,6 @@ export default {
 }
 
 .iconfont {
-  /*视频六的新增sidebar组件里面这样写，但我加上后变白了*/
-  /* color: #fff; */
+  color: #fff;
 }
 </style>
