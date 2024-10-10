@@ -15,7 +15,7 @@
 <script>
 
 import Avatar from '@/components/Avatar'
-import request from '../helpers/Request';
+import Auth from '../apis/Auth';
 
 export default {
   components: {
@@ -25,7 +25,7 @@ export default {
   methods: {
     logout() {
       console.log('logout')
-      request('/auth/logout')
+      Auth.logout()
         .then(data => {
           console.log(data)
         })

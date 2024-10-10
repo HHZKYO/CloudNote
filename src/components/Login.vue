@@ -32,12 +32,12 @@
 
 <script>
 
-import request from '../helpers/Request';
+import Auth from '../apis/Auth';
 
-// request('/auth/login', 'POST', {username: 'hunger', password: '123456'})
-//   .then(data => {
-//     console.log(data)
-//   })
+Auth.getInfo()
+  .then(data => {
+    console.log(data)
+  })
 
 export default {
   data() {
@@ -81,7 +81,7 @@ export default {
       this.register.isError = false
       this.register.notice = ''
       console.log(`start register..., username: ${this.register.username}, password: ${this.register.password}`)
-      request('/auth/register', 'POST', {username: this.register.username, password: this.register.password})
+      Auth.register({username: this.register.username, password: this.register.password})
         .then(data => {
           console.log(data)
         })
@@ -100,7 +100,7 @@ export default {
       this.login.isError = false
       this.login.notice = ''
       console.log(`start login..., username: ${this.login.username}, password: ${this.login.password}`)
-      request('/auth/login', 'POST', {username: this.login.username, password: this.login.password})
+      Auth.login({username: this.login.username, password: this.login.password})
         .then(data => {
           console.log(data)
         })
