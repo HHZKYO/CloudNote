@@ -25,10 +25,10 @@ export default {
   methods: {
     logout() {
       console.log('logout')
-      request('/auth/logout')
-        .then(data => {
-          console.log(data)
-        })
+      // request('/auth/logout')
+      //   .then(data => {
+      //     console.log(data)
+      //   })
     }
   }
 }
